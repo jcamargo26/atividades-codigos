@@ -1,0 +1,11 @@
+void setup() {
+ pinMode(04, OUTPUT);  
+
+}
+
+void loop() { //void loop = para sempre
+  digitalWrite(04, HIGH);  //04 high == pino ligado
+  delay(5000);
+  digitalWrite(04, LOW);   //04 low == pino desligado
+  delay(5000);
+}
