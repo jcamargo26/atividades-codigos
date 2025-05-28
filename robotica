@@ -1,0 +1,49 @@
+// C++ code
+//
+const int pinoVermelho = 3;
+const int pinoAmarelo = 4;
+const int pinoVerde = 5;
+const int sensor = 0;
+const int triggerPin = 8;
+const int echoPin = 9;
+
+void setup(){
+
+Serial.begin(9600);
+pinMode(pinoVermelho, OUTPUT);
+pinMode(pinoAmarelo, OUTPUT);
+pinMode(pinoVerde, OUTPUT);
+pinMode(triggerPin, OUTPUT);
+pinMode(echoPin, INPUT);
+
+}
+
+void loop(){
+
+	int distance;
+	float tempo;
+
+	distance = tempo * 0.017;
+	tempo = pulseIn(echoPin, HIGH);	
+  
+	digitalWrite(triggerPin, LOW);
+	delayMicroseconds(2);
+	digitalWrite(triggerPin, HIGH);
+	delayMicroseconds(10);
+  	digitalWrite(triggerPin, LOW);
+	
+  	Serial.print("Distância: ");
+  	Serial.println(distance);
+	
+  if(distance <=300 && distance >=200){
+      digitalWrite(pinoVermelho, LOW);
+      digitalWrite(pinoVerde,HIGH);
+      digitalWrite(pinoAmarelo, LOW);
+  }
+
+    else if(distance <= 100 && distance >= 0){
+	digitalWrite(pinoVermelho, LOW);
+	digitalWrite(pinoVerde, LOW);
+	digitalWrite(pinoAmarelo, HIGH);	 
+    }
+}
