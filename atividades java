@@ -26,6 +26,66 @@ public class Main {
 }
 
 
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int idade;
+
+        System.out.println("Insira a idade: ");
+        idade = scan.nextInt();
+
+        if (idade >= 0 && idade < 12) {
+            System.out.println("Criança.");
+        }
+        if (idade >= 12 && idade < 18) {
+            System.out.println("Adolescente.");
+        }
+        if (idade >= 18 && idade < 60) {
+            System.out.println("Adulto.");
+        }
+        if (idade >= 60) {
+            System.out.println("Idoso.");
+        }
+
+//exercicio 2
+
+        int valor = 0;
+        for (int i = 0; i <= 100; i++) {
+            System.out.println("------Laço-------" + i + "-----------");
+            System.out.println("Valor inicial: " + valor);
+            valor = valor + i;
+            System.out.println("Novo valor: " + valor + i);
+
+        }
+
+    }
+public class sla {
+    public static void main(String[] args) {
+        int i = 1;
+
+        while(i<=10){
+            i = i + 1;
+            System.out.println("Laço: "+ i);
+        }
+    }
+}
+public class Procedimentos{
+    public static void main(String[] args) {
+        String msg = "Boa noite!";
+        mensagem("Olá alunos de programação");
+        mensagem("bom dia alunos");
+        mensagem(msg);
+    }
+    public static void mensagem(String frase){
+        System.out.println("--------------");
+        System.out.println(frase);
+        System.out.println("--------------");
+    }
+}
+
+
 
 
 import java.util.Scanner;
