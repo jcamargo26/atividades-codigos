@@ -25,3 +25,30 @@ public class Main {
 
 }
 
+
+
+
+import java.util.Scanner;
+//faixa etária
+public class main {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int idade;
+
+        System.out.println("Insira a idade: ");
+        idade = scan.nextInt();
+
+        if(idade>=0 && idade<12){
+            System.out.println("Criança.");
+        }
+        if(idade>=12 && idade<18){
+            System.out.println("Adolescente.");
+        }
+        if(idade>=18 && idade <60){
+            System.out.println("Adulto.");
+        }
+        if(idade>=60){
+            System.out.println("Idoso.");
+        }
+    }
+}
