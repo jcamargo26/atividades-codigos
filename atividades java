@@ -112,3 +112,31 @@ public class main {
         }
     }
 }
+
+
+
+
+import java.util.Scanner;
+public class ex1 {
+
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int resultado = 0;
+
+        System.out.println("Digite um valor: ");
+        int valor1 = scan.nextInt();
+        System.out.println("Digite outro valor: ");
+        int valor2 = scan.nextInt();
+        
+        resultado = Somador(valor1,valor2);
+
+        System.out.println("A soma dos valores é: "+ resultado);
+    }   
+
+    public static int Somador(int a, int b){
+        int resultado = a + b;
+        return resultado;
+    }
+}
