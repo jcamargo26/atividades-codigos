@@ -140,3 +140,43 @@ public class ex1 {
         return resultado;
     }
 }
+
+
+
+
+//Crie um algoritmo que receba, no programa principal, os coeficientes a, b e c de uma equação do
+//segundo grau e utiliza uma sub-rotina para calcular as raizes x1 e x2 desta equação. O resultado
+//deve ser atribuido em uma variável pelo programa principal.
+import java.util.Scanner;
+public class ex2 {
+    public static void main(String[] args) {
+        int a1, b2, c3, resultado;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite o coeficiente A da função: ");
+        a1 = scan.nextInt();
+        System.out.println("Digite o coeficiente B da função: ");
+        b2 = scan.nextInt();
+        System.out.println("Digite o coeficiente C da função: ");
+        c3 = scan.nextInt();
+
+
+    }
+
+
+    public static int CalcularBhaskara(int a,int b,int c){
+        int delta = (b * b) - (4ac);
+
+        if(delta < 0){
+            System.out.println("Não existem raízes reais.");
+
+        }
+        double raizdelta = Math.sqrt(delta);
+        double x1 = (-b + raizdelta) / (2a);
+        double x2 = (-b - raizdelta) / (2a);
+
+        return new resultado(x1,x2);
+
+    }
+
+}
